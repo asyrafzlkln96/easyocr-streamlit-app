@@ -11,7 +11,7 @@ def display_image(file):
 	image = Image.open(file) # read image with PIL library
 	st.image(image) #display image
 
-	# it will only detect the English and Turkish part of the image as text
+	# it will only detect the English and Malay part of the image as text
 	reader = easyocr.Reader(['ms','en'], gpu=False) 
 	result = reader.readtext(np.array(image))  # turn image to numpy array
 	return result
